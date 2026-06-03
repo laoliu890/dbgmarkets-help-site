@@ -3,7 +3,6 @@
 !.gitignore
 !package.json
 !vercel.json
-!.vercelignore
 !deploy-readiness-report.md
 !seo-audit-report.md
 
