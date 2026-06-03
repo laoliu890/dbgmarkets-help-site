@@ -1,0 +1,30 @@
+.git
+node_modules
+.DS_Store
+
+# Non-site workspaces and generated media kept in the same local folder.
+finance_video_tool
+outputs
+output
+TMGM视频
+backups
+cloudfunctions
+generated-assets
+miniprogram
+ryan-tmgm-site
+tmgm-guide-site
+assets
+input
+memory
+docs
+tools
+
+# Local WeChat/miniprogram config files are unrelated to this static site deploy.
+project.config.json
+project.private.config.json
+uploadCloudFunction.sh
+
+# Preview images and reports are not part of the deployed website.
+tmgm_zh_hant_*_preview.png
+seo-audit-report.md
+deploy-readiness-report.md
