@@ -1,4 +1,5 @@
 *
+!*/
 
 !.vercelignore
 !package.json
@@ -6,11 +7,9 @@
 !deploy-readiness-report.md
 !seo-audit-report.md
 
-!dbggm-site/
 !dbggm-site/**
 
-!scripts/
-!scripts/verify-static-site.mjs
+!scripts/**
 
 .git
 .vercel
