@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!package.json
+!vercel.json
+!deploy-readiness-report.md
+!seo-audit-report.md
+
+!dbggm-site/
+!dbggm-site/**
+
+!scripts/
+!scripts/verify-static-site.mjs
