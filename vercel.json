@@ -1,5 +1,18 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dbggm-site",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dbgmarkets-help.com"
+        }
+      ],
+      "destination": "https://www.dbgmarkets-help.com/:path*",
+      "permanent": true
+    }
+  ]
 }

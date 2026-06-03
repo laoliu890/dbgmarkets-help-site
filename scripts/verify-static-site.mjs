@@ -99,10 +99,10 @@ if (!existsSync(siteDir)) {
       [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()),
     );
     for (const route of coreRoutes) {
-      const url = `https://dbgmarkets-help.com${route === "/" ? "/" : route}`;
+      const url = `https://www.dbgmarkets-help.com${route === "/" ? "/" : route}`;
       if (!sitemapUrls.has(url)) errors.push(`sitemap.xml 缺少：${url}`);
     }
-    if (sitemapUrls.has("https://dbgmarkets-help.com/404.html")) {
+    if (sitemapUrls.has("https://www.dbgmarkets-help.com/404.html")) {
       errors.push("sitemap.xml 不应包含 404 页面。");
     }
     for (const url of sitemapUrls) {
@@ -113,7 +113,7 @@ if (!existsSync(siteDir)) {
   const robotsPath = path.join(siteDir, "robots.txt");
   if (existsSync(robotsPath)) {
     const robots = readFileSync(robotsPath, "utf8");
-    if (!/Sitemap:\s*https:\/\/dbgmarkets-help\.com\/sitemap\.xml/i.test(robots)) {
+    if (!/Sitemap:\s*https:\/\/www\.dbgmarkets-help\.com\/sitemap\.xml/i.test(robots)) {
       errors.push("robots.txt 未声明正式 sitemap 地址。");
     }
     if (/Disallow:\s*\/(open-account|deposit-guide|withdrawal-guide|faq|risk-disclosure)/i.test(robots)) {
@@ -152,7 +152,7 @@ if (!existsSync(siteDir)) {
     if (!/<meta\s+property=["']og:description["']\s+content=["'][^"']+["']/i.test(html)) {
       errors.push(`${relativeFile}: 缺少 Open Graph description`);
     }
-    if (!/<meta\s+property=["']og:image["']\s+content=["']https:\/\/dbgmarkets-help\.com\/[^"']+["']/i.test(html)) {
+    if (!/<meta\s+property=["']og:image["']\s+content=["']https:\/\/www\.dbgmarkets-help\.com\/[^"']+["']/i.test(html)) {
       errors.push(`${relativeFile}: 缺少正式域名 og:image`);
     }
     if (!/<meta\s+name=["']twitter:title["']\s+content=["'][^"']+["']/i.test(html)) {
@@ -161,7 +161,7 @@ if (!existsSync(siteDir)) {
     if (!/<meta\s+name=["']twitter:description["']\s+content=["'][^"']+["']/i.test(html)) {
       errors.push(`${relativeFile}: 缺少 Twitter description`);
     }
-    if (!/<meta\s+name=["']twitter:image["']\s+content=["']https:\/\/dbgmarkets-help\.com\/[^"']+["']/i.test(html)) {
+    if (!/<meta\s+name=["']twitter:image["']\s+content=["']https:\/\/www\.dbgmarkets-help\.com\/[^"']+["']/i.test(html)) {
       errors.push(`${relativeFile}: 缺少正式域名 Twitter image`);
     }
     if (!/<h1[\s>]/i.test(html) && !relativeFile.endsWith("404.html")) {
