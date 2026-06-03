@@ -1,9 +1,8 @@
 *
 
-!.gitignore
+!.vercelignore
 !package.json
 !vercel.json
-!.vercelignore
 !deploy-readiness-report.md
 !seo-audit-report.md
 
@@ -12,4 +11,7 @@
 
 !scripts/
 !scripts/verify-static-site.mjs
+
+.git
 .vercel
+node_modules
