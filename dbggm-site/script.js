@@ -116,6 +116,13 @@ if (contactStack && floatingContactTriggers.length) {
   contactStack.append(contactToggle, contactPanel);
 
   contactToggle.addEventListener("click", () => {
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      contactStack.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+      openContactModal("qq");
+      return;
+    }
+
     const isOpen = contactStack.classList.toggle("is-open");
     contactToggle.setAttribute("aria-expanded", String(isOpen));
   });

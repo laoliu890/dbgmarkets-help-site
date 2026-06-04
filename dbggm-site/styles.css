@@ -183,7 +183,7 @@ textarea {
   background:
     radial-gradient(circle at 75% 25%, rgba(242, 197, 158, 0.2), transparent 30%),
     linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.86) 42%, rgba(5, 5, 5, 0.26) 100%),
-    url("./assets/dbg-hero-bg.png") right 49% / auto 112% no-repeat;
+    url("./assets/dbg-hero-bg.webp") right 49% / auto 112% no-repeat;
 }
 
 .hero-inner {
@@ -1477,6 +1477,10 @@ textarea {
   font-weight: 850;
 }
 
+.mobile-focus-list {
+  display: none;
+}
+
 .section-faq-block {
   padding-top: 66px;
   padding-bottom: 68px;
@@ -1786,6 +1790,603 @@ textarea {
   color: #606060;
   font-size: 15px;
   font-weight: 650;
+}
+
+.account-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: min(1040px, 100%);
+  margin: 58px auto 0;
+}
+
+.account-intro-action {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+
+.account-type-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  padding: 0 24px 26px;
+  border: 1px solid #e7d9ca;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff, #fffaf4);
+  box-shadow: 0 22px 54px rgba(24, 18, 12, 0.07);
+}
+
+.account-card-label {
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  margin: -34px -1px 0;
+  border-radius: 16px;
+  background: #11100f;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 850;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.account-card-label::after {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: #11100f;
+  transform: translateX(-50%) rotate(45deg);
+  content: "";
+}
+
+.account-std .account-card-label {
+  background: linear-gradient(135deg, #11100f 0%, #26211d 100%);
+}
+
+.account-ecn .account-card-label {
+  background: linear-gradient(135deg, #11100f 0%, #49311f 100%);
+}
+
+.account-vip .account-card-label {
+  background: linear-gradient(135deg, #17130f 0%, #8d5a2f 100%);
+}
+
+.account-std .account-card-label::after {
+  background: #201c19;
+}
+
+.account-ecn .account-card-label::after {
+  background: #2f241c;
+}
+
+.account-vip .account-card-label::after {
+  background: #4c321f;
+}
+
+.account-open-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  min-height: 54px;
+  margin: 0;
+  padding: 0 38px;
+  border: 1px solid #a96f3d;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f0bd82 0%, #c88a4d 52%, #a96f3d 100%);
+  color: #11100f;
+  font-size: 17px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow:
+    0 18px 36px rgba(185, 130, 82, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.account-open-btn:hover,
+.account-open-btn:focus-visible {
+  background: linear-gradient(180deg, #f5ca95 0%, #d39657 52%, #b87a41 100%);
+  box-shadow:
+    0 22px 42px rgba(185, 130, 82, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.account-open-btn:focus-visible {
+  outline: 2px solid rgba(185, 130, 82, 0.42);
+  outline-offset: 3px;
+}
+
+.content-section .account-open-btn {
+  color: #11100f;
+}
+
+.account-card-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.account-card-action .account-open-btn {
+  min-width: 168px;
+  min-height: 46px;
+  padding: 0 28px;
+  font-size: 15px;
+}
+
+.account-card-specs {
+  display: grid;
+  gap: 0;
+  margin: 32px 0 0;
+}
+
+.account-card-specs div {
+  display: grid;
+  gap: 4px;
+  min-height: 72px;
+  padding: 15px 0;
+  border-top: 1px solid rgba(17, 16, 15, 0.08);
+  text-align: center;
+}
+
+.account-card-specs dt {
+  color: #8a5832;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.account-card-specs dd {
+  margin: 0;
+  color: #1f1d1b;
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.55;
+}
+
+.account-card-copy {
+  margin: auto 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(17, 16, 15, 0.08);
+  color: #575350;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.72;
+  text-align: center;
+}
+
+.account-comparison-wrap {
+  width: min(1080px, 100%);
+  margin: 24px auto 0;
+  overflow-x: auto;
+  border: 1px solid #eaded3;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.05);
+}
+
+.account-comparison-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  color: #303030;
+  font-size: 14px;
+}
+
+.account-comparison-table th,
+.account-comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eaded3;
+  text-align: left;
+  vertical-align: top;
+}
+
+.account-comparison-table th {
+  background: #191714;
+  color: #fff;
+  font-weight: 850;
+}
+
+.account-comparison-table th:first-child,
+.account-comparison-table td:first-child {
+  width: 190px;
+  color: #8b5d37;
+  font-weight: 850;
+}
+
+.account-comparison-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.account-note-list {
+  display: grid;
+  gap: 10px;
+  width: min(980px, 100%);
+  margin: 22px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.account-note-list li {
+  padding: 16px 18px;
+  border: 1px solid #eaded3;
+  border-radius: 10px;
+  background: #fff;
+  color: #606060;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+.mobile-account-specs,
+.mobile-account-contact-section {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .account-types-page .floating-contact-stack {
+    display: block;
+  }
+
+  .account-type-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: min(360px, 100%);
+    margin-top: 22px;
+  }
+
+  .account-type-card {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px 12px;
+    padding: 16px 16px 16px 18px;
+    border: 1px solid rgba(231, 217, 202, 0.9);
+    border-left: 5px solid #15120f;
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 244, 0.98)),
+      radial-gradient(circle at top right, rgba(185, 130, 82, 0.13), transparent 36%);
+    box-shadow: 0 16px 34px rgba(24, 18, 12, 0.08);
+  }
+
+  .account-type-card.account-ecn {
+    border-left-color: #4b3020;
+  }
+
+  .account-type-card.account-vip {
+    border-left-color: #9a6233;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 239, 0.98)),
+      radial-gradient(circle at top right, rgba(185, 130, 82, 0.18), transparent 38%);
+  }
+
+  .account-card-label {
+    display: flex;
+    align-items: center;
+    min-height: auto;
+    margin: 0;
+    border-radius: 0;
+    background: transparent !important;
+    color: #11100f;
+    font-size: 22px;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  .account-card-label::before {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: #15120f;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    content: "01";
+  }
+
+  .account-ecn .account-card-label::before {
+    background: #4b3020;
+    content: "02";
+  }
+
+  .account-vip .account-card-label::before {
+    background: #9a6233;
+    content: "03";
+  }
+
+  .account-card-label::after {
+    display: none;
+  }
+
+  .account-card-action {
+    align-self: center;
+    order: 1;
+    margin-top: 0;
+  }
+
+  .account-card-action .account-open-btn {
+    min-width: 96px;
+    min-height: 36px;
+    padding: 0 14px;
+    border-color: rgba(185, 130, 82, 0.42);
+    background: rgba(255, 255, 255, 0.74);
+    color: #8a5832;
+    font-size: 13px;
+    box-shadow: none;
+  }
+
+  .account-card-specs {
+    grid-column: 1 / -1;
+    order: 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 0;
+  }
+
+  .account-card-specs div {
+    min-height: 56px;
+    padding: 9px 6px;
+    border: 1px solid rgba(17, 16, 15, 0.07);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .account-card-specs div:first-child {
+    border-color: rgba(185, 130, 82, 0.24);
+    background: rgba(185, 130, 82, 0.08);
+  }
+
+  .account-card-specs div:nth-child(n+4) {
+    display: none;
+  }
+
+  .account-card-specs dt {
+    font-size: 12px;
+  }
+
+  .account-card-specs dd {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .account-card-copy {
+    display: none;
+  }
+
+  .account-comparison-wrap {
+    display: none;
+  }
+
+  .mobile-account-specs {
+    display: grid;
+    gap: 12px;
+    width: min(360px, 100%);
+    margin: 22px auto 0;
+  }
+
+  .mobile-account-detail {
+    border: 1px solid #e7d9ca;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #fff, #fffaf4);
+    box-shadow: 0 14px 36px rgba(24, 18, 12, 0.06);
+    overflow: hidden;
+  }
+
+  .mobile-account-detail summary {
+    position: relative;
+    display: grid;
+    gap: 4px;
+    min-height: 66px;
+    padding: 14px 44px 14px 16px;
+    color: #11100f;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-account-detail summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-account-detail summary::after {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: #8a5832;
+    font-size: 20px;
+    font-weight: 900;
+    transform: translateY(-50%);
+    content: "+";
+  }
+
+  .mobile-account-detail[open] summary::after {
+    content: "-";
+  }
+
+  .mobile-account-detail summary span {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .mobile-account-detail summary strong {
+    color: #6b625b;
+    font-size: 13px;
+    font-weight: 780;
+    line-height: 1.45;
+  }
+
+  .mobile-spec-group {
+    padding: 14px 16px;
+    border-top: 1px solid rgba(17, 16, 15, 0.08);
+  }
+
+  .mobile-spec-group h3 {
+    margin: 0 0 10px;
+    color: #8a5832;
+    font-size: 14px;
+  }
+
+  .mobile-spec-group dl {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .mobile-spec-group dl div {
+    display: grid;
+    grid-template-columns: minmax(92px, 38%) 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 9px 0;
+    border-top: 1px solid rgba(17, 16, 15, 0.06);
+  }
+
+  .mobile-spec-group dl div:first-child {
+    border-top: 0;
+  }
+
+  .mobile-spec-group dt {
+    color: #6f6257;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .mobile-spec-group dd {
+    margin: 0;
+    color: #181715;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.48;
+    overflow-wrap: anywhere;
+  }
+
+  .mobile-account-rule-note {
+    margin: 2px 0 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(185, 130, 82, 0.28);
+    border-radius: 12px;
+    background: rgba(185, 130, 82, 0.08);
+    color: #62584f;
+    font-size: 13px;
+    font-weight: 720;
+    line-height: 1.68;
+  }
+
+  .mobile-account-contact-section {
+    display: none;
+  }
+
+  .mobile-contact-card {
+    width: min(360px, 100%);
+    margin: 0 auto;
+    padding: 28px 20px 22px;
+    border: 1px solid #e7d9ca;
+    border-radius: 14px;
+    background: #fffaf4;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+  }
+
+  .mobile-account-contact-section h2 {
+    margin: 0 0 18px;
+    color: #11100f;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .mobile-account-contact-section p {
+    margin: 0;
+    color: #5b5651;
+    font-size: 15px;
+    font-weight: 760;
+    line-height: 1.74;
+  }
+
+  .mobile-contact-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    margin-top: 24px;
+  }
+
+  .mobile-contact-actions a {
+    display: grid;
+    place-items: center;
+    min-height: 42px;
+    border: 1px solid rgba(185, 130, 82, 0.34);
+    border-radius: 999px;
+    background: #fff;
+    color: #8a5832;
+    font-size: 15px;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .account-types-page .section-issues-block h2 {
+    font-size: 30px;
+    line-height: 1.18;
+  }
+
+  .account-types-page .section-issues-block .issue-list {
+    display: none;
+  }
+
+  .mobile-focus-list {
+    display: grid;
+    gap: 10px;
+    width: min(360px, 100%);
+    margin: 0 auto;
+  }
+
+  .mobile-focus-list article {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 14px 14px 14px 12px;
+    border: 1px solid #e7d9ca;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 10px 28px rgba(24, 18, 12, 0.05);
+  }
+
+  .mobile-focus-list article span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #15120f;
+    color: #d9a06a;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .mobile-focus-list h3 {
+    margin: 0 0 4px;
+    color: #181715;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .mobile-focus-list p {
+    margin: 0;
+    color: #5f5851;
+    font-size: 13px;
+    font-weight: 680;
+    line-height: 1.58;
+  }
 }
 
 .issue-list {
@@ -2530,7 +3131,7 @@ h3[id] {
   .hero-bg {
     background:
       linear-gradient(180deg, rgba(5, 5, 5, 0.1), rgba(5, 5, 5, 0.86) 54%, #050505 100%),
-      url("./assets/dbg-hero-bg.png") center top 48px / 108% auto no-repeat;
+      url("./assets/dbg-hero-bg.webp") center top 48px / 108% auto no-repeat;
   }
 
   .hero-inner {
@@ -2945,8 +3546,8 @@ h3[id] {
 
   .floating-contact-stack {
     top: auto;
-    right: max(14px, env(safe-area-inset-right));
-    bottom: max(16px, env(safe-area-inset-bottom));
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(78px, calc(env(safe-area-inset-bottom) + 78px));
     left: auto;
     display: block;
     padding: 0;
@@ -2970,8 +3571,8 @@ h3[id] {
     display: grid;
     place-items: center;
     pointer-events: auto;
-    width: 56px;
-    height: 56px;
+    width: 68px;
+    height: 68px;
     overflow: hidden;
     border: 0;
     border-radius: 50%;
@@ -2979,16 +3580,18 @@ h3[id] {
     color: #17120e;
     cursor: pointer;
     font-size: 0;
-    box-shadow:
-      0 12px 28px rgba(0, 0, 0, 0.26),
-      0 0 0 4px rgba(10, 9, 8, 0.16);
+    box-shadow: none;
+  }
+
+  .floating-contact-main::before {
+    content: none;
   }
 
   .floating-contact-panel {
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: 66px;
+    bottom: 84px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
@@ -3835,5 +4438,20 @@ h3[id] {
     top: 7px;
     left: 8px;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .floating-contact-stack {
+    width: 68px;
+    height: 68px;
+  }
+
+  .floating-contact-panel,
+  .floating-contact-stack.is-open .floating-contact-panel,
+  .floating-contact-stack .floating-contact-btn {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
