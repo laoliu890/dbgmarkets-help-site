@@ -172,7 +172,7 @@ textarea {
 
 .hero {
   position: relative;
-  min-height: 640px;
+  min-height: 540px;
   overflow: hidden;
   background: #030303;
 }
@@ -181,9 +181,9 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 75% 25%, rgba(242, 197, 158, 0.2), transparent 30%),
-    linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.86) 42%, rgba(5, 5, 5, 0.26) 100%),
-    url("./assets/dbg-hero-bg.webp") right 49% / auto 112% no-repeat;
+    radial-gradient(circle at 82% 28%, rgba(242, 197, 158, 0.1), transparent 30%),
+    linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.94) 48%, rgba(5, 5, 5, 0.7) 100%),
+    url("./assets/dbg-hero-bg.webp") right bottom / auto 96% no-repeat;
 }
 
 .hero-inner {
@@ -192,13 +192,14 @@ textarea {
   display: grid;
   align-items: center;
   width: min(var(--max), calc(100% - 48px));
-  min-height: 640px;
+  min-height: 540px;
   margin: 0 auto;
-  padding-top: 78px;
+  padding-top: 82px;
+  padding-bottom: 34px;
 }
 
 .hero-copy {
-  width: min(690px, 100%);
+  width: min(640px, 100%);
 }
 
 .eyebrow {
@@ -213,19 +214,23 @@ textarea {
 .hero h1 {
   margin: 0;
   color: rgba(255, 255, 255, 0.94);
-  max-width: 12.6em;
-  font-size: clamp(52px, 5.35vw, 80px);
+  max-width: 12.8em;
+  font-size: clamp(38px, 4.05vw, 56px);
   font-weight: 800;
-  line-height: 1.04;
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
+.hero-title-nowrap {
+  white-space: nowrap;
+}
+
 .hero p:not(.eyebrow) {
-  max-width: 660px;
-  margin: 24px 0 0;
+  max-width: 620px;
+  margin: 18px 0 0;
   color: var(--muted);
-  font-size: 19px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.74;
 }
 
 .hero-actions {
@@ -238,7 +243,7 @@ textarea {
 .hero-actions-main {
   align-items: center;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .btn {
@@ -260,15 +265,15 @@ textarea {
 }
 
 .hero-actions-main .btn {
-  min-width: 144px;
-  min-height: 50px;
-  padding: 0 24px;
+  min-width: 132px;
+  min-height: 46px;
+  padding: 0 20px;
 }
 
 .hero-actions-main .btn.primary {
-  min-width: 164px;
-  min-height: 58px;
-  font-size: 18px;
+  min-width: 148px;
+  min-height: 50px;
+  font-size: 16px;
 }
 
 .hero-actions-main .btn.secondary {
@@ -3125,26 +3130,26 @@ h3[id] {
 
   .hero,
   .hero-inner {
-    min-height: 500px;
+    min-height: 470px;
   }
 
   .hero-bg {
     background:
-      linear-gradient(180deg, rgba(5, 5, 5, 0.1), rgba(5, 5, 5, 0.86) 54%, #050505 100%),
-      url("./assets/dbg-hero-bg.webp") center top 48px / 108% auto no-repeat;
+      linear-gradient(180deg, rgba(5, 5, 5, 0.22), rgba(5, 5, 5, 0.9) 52%, #050505 100%),
+      url("./assets/dbg-hero-bg.webp") center top 54px / 100% auto no-repeat;
   }
 
   .hero-inner {
     align-items: end;
     width: calc(100% - 40px);
     padding-top: 44px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .hero h1 {
-    max-width: 9em;
-    font-size: 34px;
-    line-height: 1.1;
+    max-width: 12.4em;
+    font-size: 30px;
+    line-height: 1.16;
   }
 
   .hero p:not(.eyebrow) {
